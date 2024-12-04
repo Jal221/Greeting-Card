@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Greeting_Card
 {
@@ -33,6 +34,7 @@ namespace Greeting_Card
             Pen redPen = new Pen(Color.Red, 10);
             Pen brownPen = new Pen(Color.Brown, 45);
             SolidBrush greenBrush = new SolidBrush(Color.Green);
+            SolidBrush redBrush = new SolidBrush(Color.Red);
             SolidBrush blackbrush = new SolidBrush(Color.Black);
             Font greeting = new Font("Arial", 20, FontStyle.Bold);
 
@@ -45,11 +47,28 @@ namespace Greeting_Card
             g.DrawEllipse(blackPen, 35, 150, 85, 85);
             g.DrawEllipse(blackPen, 440, 150, 85, 85);
             g.FillEllipse(greenBrush, 35, 150, 85, 85);
+            g.FillEllipse(greenBrush, 440, 150, 85, 85);
 
 
-            for (int i = 0; i <= 1; i++)
+            while (1>0)
             {
                
+                    
+                    g.FillEllipse(greenBrush, 35, 150, 85, 85);
+                    g.FillEllipse(greenBrush, 440, 150, 85, 85);
+
+                    Thread.Sleep(2000);
+
+                    g.FillEllipse(redBrush, 35, 150, 85, 85);
+                    g.FillEllipse(redBrush, 440, 150, 85, 85);
+
+                    Thread.Sleep(2000);
+
+
+                
+              
+
+
             }
         }
 
@@ -67,6 +86,8 @@ namespace Greeting_Card
             g.DrawPie(greenPen, 150, 0, 250, 300, 50, 75);
             g.FillPie(greenBrush, 150, 0, 250, 300, 50, 75);
             g.DrawLine(brownPen, 275, 300, 275, 380);
+
+           
         }
     }
 }
