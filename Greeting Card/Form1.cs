@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
-
+/// made by Jal Patel
+/// decemeber 9th 2024
+/// this program is suppose to be a animation for a chirstmas card
 namespace Greeting_Card
 {
     public partial class Form1 : Form
